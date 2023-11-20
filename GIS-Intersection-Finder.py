@@ -1,8 +1,14 @@
 #-------------------------------------------------------------------------------
-# Name:        module2
-# Purpose:
+# Name:       GIS Intersection Finder
+# Purpose:    The code in the "GIS-Intersection-Finder" project serves the purpose of
+#             Identifying intersecting streets and calculating the closest intersections for given 
+#             spatial data, specifically designed for the context of a GIS analysis in the Austin, Texas, area. 
+#             The analysis is conducted using GeoPandas and Shapely libraries in Python, 
+#             allowing users to explore and visualize the relationships between road networks and 
+#             speed management projects in the region. The provided scripts enable users to interactively
+#             select target streets and obtain information about their intersections, facilitating spatial analysis in a geospatial context.
 #
-# Author:      MohammadalizadehkorM
+# Author:     Milad Korde
 #
 # Created:     20/11/2023
 # Copyright:   (c) MohammadalizadehkorM 2023
