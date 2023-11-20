@@ -37,7 +37,7 @@ This repository contains Python scripts for a comprehensive Geographic Informati
 
 Before using this script, you need to have the following prerequisites installed on your system:
 
-- Python 3.x
+- Python 3.11
 - Geopandas
 - Shapely
 
