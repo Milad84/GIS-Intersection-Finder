@@ -1,4 +1,4 @@
-# GIS Intersection Finder
+# GIS for Programmers Code Repository
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![Python 3.11](https://img.shields.io/badge/Python-3.11-blue.svg)
@@ -6,24 +6,23 @@
 ![Shapely](https://img.shields.io/badge/Shapely-2.0.0-brightgreen.svg)
 
 
-A Python script for finding streets that intersect with a target line string along the same street network in a given shapefile using Geopandas.
+Welcome to the official code repository for the book "GIS for Programmers." This repository is a comprehensive collection of code examples, scripts, and projects designed to accompany the book. Whether you are a novice eager to grasp fundamental GIS principles or an experienced developer aiming to integrate spatial data into your applications seamlessly, this repository is your ultimate resource.
 
 ## Table of Contents
 
-- [Description](#description)
-- [Features](#features)
+- [Introduction](#introduction)
+- [Structure](#features)
 - [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-- [Usage](#usage)
-- [Examples](#examples)
-- [Search by Street Name](#Search-by-Street-Name)
-- [Search by Geometry Coordinates](#Search-by-Geometry-Coordinates)
-- [Acknowledgments](#acknowledgments)
+- [Contributing](#contributing)
 
-## Description
 
-This repository contains Python scripts for a comprehensive Geographic Information System (GIS) analysis of speed management projects in Austin, Texas. The code leverages the GeoPandas library to perform spatial operations on a road network layer and a dispersed multi-line layer representing speed management projects. The analysis includes identifying intersecting streets, finding the closest intersections at the exterior parts of line segments, and dynamically handling variations in buffer distances. The resulting GeoDataFrame is saved and can be used for further exploration and visualization.
+## Introduction
+
+This repository contains practical implementations of Geographic Information Systems (GIS) concepts for programmers and developers. The code is organized by chapters, providing an easy-to-navigate structure for finding and exploring examples related to specific topics.
+
+## Structure
+
+The repository follows a structured organization, with each chapter's code residing in its dedicated directory. The naming conventions for files and codes reflect the listings in the book. Please note that, while comments are added in Python using #, they should be removed for other languages like JavaScript to ensure code functionality.
 
 ## Features
 
@@ -33,49 +32,12 @@ This repository contains Python scripts for a comprehensive Geographic Informati
 
 ## Getting Started
 
-### Prerequisites
-
-Before using this script, you need to have the following prerequisites installed on your system:
-
-- Python 3.11
-- Geopandas
-- Shapely
-
-### Installation
-
-## Installation
-
-1. Clone this repository to your local machine:
-
-   ```shell
-   git clone https://github.com/YourUsername/GIS-Intersection-Finder.git
-Navigate to the project directory:
+To get started, clone the repository to your local machine using the following command:
 
 ```shell
-    cd GIS-Intersection-Finder
-```
-Install the required Python packages:
-```shell
-pip install geopandas shapely
+   git clone https://github.com/your-username/gis-for-programmers.git
 ```
 
+## Contributing
 
-## Usage
-
-1. Run the script by executing python IntFinder.py from the command line.
-
-2. Explore the GeoDataFrame for intersecting streets and closest intersections.
-
-
-## Examples
-
-
-![image](https://github.com/Milad84/GIS-Intersection-Finder/assets/38597478/f672816f-f305-4a19-b5c3-eddcab64441e)
-
-
-
-## Acknowledgments
-1. Geopandas - For geospatial data manipulation.
-2. Shapely - For geometric operations.
-
-
+We encourage collaboration and welcome contributions. If you find issues errors or have enhancements to suggest, please feel free to submit a pull request. Refer to our Contribution Guidelines for more details.
