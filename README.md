@@ -62,7 +62,7 @@ pip install geopandas shapely
 
 ## Usage
 
-1. Run the script by executing python IntFinder.py from the command line.
+1. Run the script by executing GIS-Intersection-Finder.py from the command line.
 
 2. Explore the GeoDataFrame for intersecting streets and closest intersections.
 
