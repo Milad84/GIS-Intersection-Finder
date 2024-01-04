@@ -72,6 +72,3 @@ pip install geopandas shapely
 
 ![image](https://github.com/Milad84/GIS-Intersection-Finder/assets/38597478/f672816f-f305-4a19-b5c3-eddcab64441e)
 
-
-
-## Acknowledgments
