@@ -67,7 +67,7 @@ pip install geopandas shapely
 2. Explore the GeoDataFrame for intersecting streets and closest intersections.
 
 
-## Examples
+## Output Example
 
 
 ![image](https://github.com/Milad84/GIS-Intersection-Finder/assets/38597478/f672816f-f305-4a19-b5c3-eddcab64441e)
