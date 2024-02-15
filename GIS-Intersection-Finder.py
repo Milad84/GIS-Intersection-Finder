@@ -16,22 +16,16 @@
 #-------------------------------------------------------------------------------
 
 import geopandas as gpd
-from shapely.geometry import Point, LineString
+from shapely.geometry import Point
+import pandas as pd
 
 # Load your dispersed multiline layer (speed management projects) and the street network layer into GeoDataFrames
-speed_projects = gpd.read_file(r'C:\Users\MohammadalizadehkorM\Desktop\Speed Management\Speed Management Study Areas.shp')
+speed_projects = gpd.read_file(r'C:\Users\MohammadalizadehkorM\Desktop\Speed Management\Streets_TrafficCalming_2023A_Ranking_Copy_Backup.shp')
 street_network = gpd.read_file(r'C:\Users\MohammadalizadehkorM\Desktop\CTN\CTN.shp')
 
 # Set the CRS to EPSG:2277
 speed_projects.crs = 'EPSG:2277'
 street_network.crs = 'EPSG:2277'
-
-# Function to find intersecting streets for a given row
-def find_intersecting_streets(row):
-    return street_network[street_network.intersects(row['geometry'])]['FULL_STREE'].tolist()
-
-# Find the intersecting streets for each speed project using the original geometry
-speed_projects['intersecting_streets'] = speed_projects.apply(find_intersecting_streets, axis=1)
 
 # Define a buffer distance for finding closest intersections (adjust as needed)
 initial_buffer_distance = 300  # You can experiment with different initial buffer distances
@@ -51,7 +45,14 @@ def find_closest_intersection(row, end):
             break
         buffer_distance += 50  # Increase the buffer distance (adjust as needed)
 
-    return street_network[street_network.intersects(buffer)]['FULL_STREE'].tolist()
+    # Find the intersecting streets
+    intersecting_streets = street_network[street_network.intersects(buffer)]['FULL_STREE'].tolist()
+
+    # Remove NaN values and convert to strings, then remove duplicates and join with commas
+    unique_streets = ','.join(set(map(str, filter(lambda x: not pd.isna(x), intersecting_streets))))
+
+    return unique_streets
+
 
 # Find the closest intersections for each speed project
 speed_projects['closest_intersection_start'] = speed_projects.apply(lambda row: find_closest_intersection(row, 'start'), axis=1)
@@ -59,3 +60,4 @@ speed_projects['closest_intersection_end'] = speed_projects.apply(lambda row: fi
 
 # Save the result to a CSV file
 speed_projects.to_csv(r'C:\Users\MohammadalizadehkorM\Desktop\Speed Management\SpeedManResWithStreetsAndClosest.csv', index=False)
+
